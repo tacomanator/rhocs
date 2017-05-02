@@ -1,3 +1,3 @@
 import logProps from "./logProps";
 
-export default { logProps };
+export { logProps };
