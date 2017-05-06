@@ -6,15 +6,15 @@ export default selector => WrappedComponent => {
   if (R.isNil(selector)) {
     finalSelector = R.identity;
   } else if (selector instanceof Array) {
-    finalSelector = R.props(propsSelector);
+    finalSelector = R.props(selector);
   } else if (typeof selector === "string") {
-    finalSelector = R.prop(propsSelector);
+    finalSelector = R.prop(selector);
   } else if (typeof selector === "function") {
-    finalSelector = propsSelector;
+    finalSelector = selector;
   }
 
   return props => {
-    console.log(WrappedComponent.name, finalSelector(props));
+    console.log(WrappedComponent.name, "logProps", finalSelector(props));
     return <WrappedComponent {...props} />;
   };
 };
