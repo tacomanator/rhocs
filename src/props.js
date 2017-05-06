@@ -14,7 +14,7 @@ export default selector => WrappedComponent => {
   }
 
   return props => {
-    console.log(WrappedComponent.name, "logProps", finalSelector(props));
+    console.log(WrappedComponent.name, "props", finalSelector(props));
     return <WrappedComponent {...props} />;
   };
 };

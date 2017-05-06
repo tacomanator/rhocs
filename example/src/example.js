@@ -10,7 +10,13 @@ export default WrappedComponent => {
     update = () => this.setState({ dummy: this.state.dummy + 1 });
 
     render() {
-      return <WrappedComponent update={this.update} {...this.props} />;
+      return (
+        <WrappedComponent
+          update={this.update}
+          dummy={this.state.dummy}
+          {...this.props}
+        />
+      );
     }
   };
 };

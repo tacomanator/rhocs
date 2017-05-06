@@ -1,5 +1,6 @@
-import logProps from "./logProps";
-import lopRerender from "./logRerender";
-import logRerenderedCount from "./logRerenderedCount";
+import changedProps from "./changedProps";
+import props from "./props";
+import rerenderEvent from "./rerenderEvent";
+import rerenderCount from "./rerenderCount";
 
-export { logProps, logRerender, logRerenderedCount };
+export { changedProps, props, rerenderEvent, rerenderCount };

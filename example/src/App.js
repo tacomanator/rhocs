@@ -1,12 +1,14 @@
 import React, { Component } from "react";
-import LogProps from "./LogProps";
-import LogRerender from "./LogRerender";
-import LogRerenderCount from "./LogRerenderCount";
+import ChangedProps from "./examples/ChangedProps";
+import Props from "./examples/Props";
+import RerenderCount from "./examples/RerenderCount";
+import RerenderEvent from "./examples/RerenderEvent";
 
 const examples = {
-  logProps: <LogProps prop1="1" prop2={2} />,
-  logRerender: <LogRerender />,
-  logRerenderCount: <LogRerenderCount />
+  changedProps: <ChangedProps />,
+  props: <Props prop1="1" prop2={2} />,
+  rerenderCount: <RerenderCount />,
+  rerenderEvent: <RerenderEvent foo="bar" time={Date.now()} />
 };
 
 class App extends Component {
