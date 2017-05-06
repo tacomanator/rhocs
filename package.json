@@ -18,6 +18,8 @@
   "scripts": {
     "precommit": "lint-staged",
     "build": "babel src --out-dir lib",
+    "develop": "onchange 'src/**' -w -i -- npm run build",
+    "postbuild": "cp -R lib example",
     "prepublish": "npm run build"
   },
   "devDependencies": {
@@ -29,6 +31,7 @@
     "babelify": "^7.2.0",
     "husky": "^0.13.2",
     "lint-staged": "^3.4.0",
+    "onchange": "^3.2.1",
     "prettier": "^1.2.2"
   },
   "peerDependencies": {
