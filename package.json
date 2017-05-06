@@ -1,6 +1,6 @@
 {
   "name": "rhocs",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "React helper ordered components.",
   "main": "lib/index.js",
   "author": "Drew Goodwin <drew@drewgoodwin.com>",
