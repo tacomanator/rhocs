@@ -1,3 +1,4 @@
 import logProps from "./logProps";
+import logRerenderedCount from "./logRerenderedCount";
 
-export { logProps };
+export { logProps, logRerenderedCount };
