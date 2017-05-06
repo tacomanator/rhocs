@@ -27,9 +27,14 @@ logs the component's props. A props selector may optionally be passed as can be 
 export default require('rhocs').logProps('name')(Widget)
 ```
 
-### logRerenderedCount
+### logRerender
 
-logs a count of the times the component was rerendered (updated from the outside). Example:
+logs each rerender (updated from the outside) event.
+
+
+### logRerenderCount
+
+Similar to logRerender but also keeps track of and logs the count. Useful when there is more than one instance of element type logging rerender events.
 
 ## Installation
 

@@ -1,10 +1,12 @@
 import React, { Component } from "react";
 import LogProps from "./LogProps";
-import LogRerenderedCount from "./LogRerenderedCount";
+import LogRerender from "./LogRerender";
+import LogRerenderCount from "./LogRerenderCount";
 
 const examples = {
   logProps: <LogProps prop1="1" prop2={2} />,
-  logRerenderedCount: <LogRerenderedCount />
+  logRerender: <LogRerender />,
+  logRerenderCount: <LogRerenderCount />
 };
 
 class App extends Component {

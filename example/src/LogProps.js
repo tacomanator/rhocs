@@ -1,14 +1,11 @@
 import React from "react";
+import R from "ramda";
 import { compose } from "recompose";
-import logProps from "../lib/logProps";
 import example from "./example";
+import logProps from "../lib/logProps";
 
-const LogProps = props => (
-  <div>
-    <button onClick={props.update}>Log my props</button>
-  </div>
-);
+const LogProps = props => <button onClick={props.update}>Log my props</button>;
 
-const enhance = compose(example, logProps());
+const enhance = compose(example, logProps(R.omit(["update"])));
 
 export default enhance(LogProps);
