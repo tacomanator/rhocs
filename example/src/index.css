@@ -1,5 +1,11 @@
-body {
-  padding: 1.5em
+html, body {
+  height: 100%;
+  padding: 0;
+  margin: 0
+}
+
+*, *:before, *:after {
+  box-sizing: border-box;
 }
 
 button {
