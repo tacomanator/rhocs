@@ -1,7 +1,11 @@
-import React from "react";
-import R from "ramda";
+import React, { Component } from "react";
 
-export default WrappedComponent => props => {
-  console.log(WrappedComponent.name, "rerenderEvent");
-  return <WrappedComponent {...props} />;
+export default WrappedComponent => class RerenderEvent extends Component {
+  componentDidUpdate() {
+    console.log(WrappedComponent.name, "rerenderEvent");
+  }
+
+  render() {
+    return <WrappedComponent {...this.props} />;
+  }
 };

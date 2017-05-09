@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Component } from "react";
 import R from "ramda";
 
 export default selector => WrappedComponent => {
@@ -13,8 +13,12 @@ export default selector => WrappedComponent => {
     finalSelector = selector;
   }
 
-  return props => {
-    console.log(WrappedComponent.name, "props", finalSelector(props));
-    return <WrappedComponent {...props} />;
+  return class Props extends Component {
+    componentDidUpdate() {
+      console.log(WrappedComponent.name, "props", finalSelector(this.props));
+    }
+    render() {
+      return <WrappedComponent {...this.props} />;
+    }
   };
 };
